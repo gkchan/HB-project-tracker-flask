@@ -4,13 +4,17 @@
     <title>Project Info</title>
 </head>
 <body>
-  <h1>{{ title }}</h1><br>
+  <h1>{{ title }}</h1>
 
-  <p>{{ description }}</p><br>
+  <h2>{{ description }}</h2>
 
   <p>The maximum grade for {{ title }} is {{ max_grade }}.</p>
 
- 
-
+  <h4>Students who have completed this project and their grades:</h4>
+  <ul>
+  {% for github, grade in github_grade_list %}
+  <li><a href="student?github={{ github }}">{{ github }}</a>: {{ grade }}</li>
+  {% endfor%}
+  </ul>
 </body>
 </html>
