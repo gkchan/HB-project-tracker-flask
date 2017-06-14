@@ -15,11 +15,14 @@ def get_student():
 
     first, last, github = hackbright.get_student_by_github(github)
 
+    project_list = hackbright.get_grades_by_github(github)
+
 
     return render_template("student_info.html",
                            first=first,
                            last=last,
-                           github=github)
+                           github=github,
+                           project_list=project_list)
 
 @app.route("/student-search")
 def get_student_form():
