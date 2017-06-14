@@ -11,7 +11,7 @@
   <ul>
 
     {% for project, grade in project_list %}
-    <li>{{ project }} {{ grade }}</li>
+    <li><a href="/project?project={{ project }}">{{ project }}</a>  {{ grade }}</li>
     {% endfor %}
   </ul>
 
